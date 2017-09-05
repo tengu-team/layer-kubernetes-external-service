@@ -1,0 +1,9 @@
+name: kubernetes-external-service
+summary: This charm creates external services for Kubernetes.
+maintainer: Sander Borny <sander.borny@ugent.be>
+description: |
+  This charm provides external service requests to a kubernetes-deployer charm.
+requires:
+  kubernetes-deployer:
+    interface: kubernetes-deployer
+series: ['xenial']
