@@ -1,2 +1,3 @@
 includes: ['layer:basic',
            'interface:kubernetes-deployer']
+repo: git@github.com:tengu-team/layer-kubernetes-external-service.git

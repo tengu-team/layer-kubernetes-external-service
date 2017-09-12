@@ -1,6 +1,0 @@
-options:
-  service-name:
-    type: string
-    default: ""
-    description: |
-      Name of the external Kubernetes service. Used with type ExternalName.

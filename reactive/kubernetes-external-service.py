@@ -57,10 +57,10 @@ def deployer_connected_headless(deployer):
 @when('kubernetes-deployer.available')
 def service_running(deployer):
     conf = hookenv.config()
-    external_services = deployer.get_services()
-    unit = os.environ['JUJU_UNIT_NAME'].split('/')[0]
-    if unit in external_services:
-        status_set('active', 'Ready external service({})'.format(conf.get('service-name')))
+    external_service = deployer.get_services()
+    if external_service:
+        status_set('active', 'Ready external service')
+        unitdata.kv().set('service_name', external_service['service_name'])
 
 
 @when('kubernetes-deployer.joined')
