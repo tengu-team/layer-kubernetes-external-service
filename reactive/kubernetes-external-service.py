@@ -61,6 +61,8 @@ def service_running(deployer):
     if external_service:
         status_set('active', 'Ready external service')
         unitdata.kv().set('service_name', external_service['service_name'])
+    else:
+        unitdata.kv().set('service_name', '')
 
 
 @when('kubernetes-deployer.joined')
